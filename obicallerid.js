@@ -38,8 +38,6 @@ function cleanNumber(num)
     return num;
 }
 
-
-
 var cnams = {};
 function importScript(script)
 {
@@ -48,7 +46,7 @@ function importScript(script)
         if (err) {
             logger.error("Could not import " + script + " " + err);
         } else if(Array.isArray(rtn) && rtn.length > 0) {
-
+            logger.info(script + " Importing " + rtn.length + " numbers...");
             for (var i=0; i<rtn.length; i=i+2) {
                 var num = cleanNumber(rtn[i]);
 
