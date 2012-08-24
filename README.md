@@ -18,17 +18,11 @@
   In Obitalk website -> Obi Expert Config
 
     System Management -> Device Admin
-
       Syslog
-
         Server =  <IP Address of where you are running obicallerid>
-
         Port = 7000
-
         Level = 7
-
     Voice Service -> SPx Service
-
       X_SipDebugOption = Log All Except REGISTER Message
 
 ##Usage
