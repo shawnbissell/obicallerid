@@ -1,12 +1,12 @@
 {
     "name": "obicallerid",
-    "description": "Show Caller ID Name as Growl notifications from Obihai devices ",
+    "description": "Caller ID and Name Growl notifications from Obihai devices on mac osx",
     "keywords": ["callerid", "cnam", "obi", "obihai", "caller id"],
     "version": "0.1.0",
     "homepage": "",
     "repository": "",
     "author": "Shawn Bissell <shawn.bissell@gmail.com>",
-    "main": "obicallerid",
+    "bin" : { "obicallerid" : "obicallerid.js" },
     "dependencies": {
         "winston": ">= 0.6.2"
         , "growl": ">= 1.5.1"

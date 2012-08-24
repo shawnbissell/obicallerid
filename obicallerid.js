@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var command = "none";
 if (process.argv.length > 2){
     command = process.argv[2];
@@ -42,7 +44,7 @@ var cnams = {};
 function importScript(script)
 {
     logger.info("Importing cnams from " + script);
-    applescript.execFile(script, [ ], function(err, rtn) {
+    applescript.execFile(__dirname + "/" + script, [ ], function(err, rtn) {
         if (err) {
             logger.error("Could not import " + script + " " + err);
         } else if(Array.isArray(rtn) && rtn.length > 0) {
