@@ -1,0 +1,17 @@
+{
+    "name": "obicallerid",
+    "description": "Show Caller ID Name as Growl notifications from Obihai devices ",
+    "keywords": ["callerid", "cnam", "obi", "obihai", "caller id"],
+    "version": "0.1.0",
+    "homepage": "",
+    "repository": "",
+    "author": "Shawn Bissell <shawn.bissell@gmail.com>",
+    "main": "obicallerid",
+    "dependencies": {
+        "winston": ">= 0.6.2"
+        , "growl": ">= 1.5.1"
+        , "opencnam": ">= 0.1.1"
+        , "applescript": ">= 0.2.1"
+    },
+    "engines": { "node": "*" }
+}
