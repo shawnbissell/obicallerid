@@ -11,7 +11,7 @@ Install Growl from AppStore
 
 Install growlnotify command line application http://growl.info/extras.php#growlnotify
 
-    $ npm install -g obicallerid
+    $ sudo npm install -g obicallerid
 
 ##Obi Setup
 
