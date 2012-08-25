@@ -1,9 +1,9 @@
 # Obi Caller ID Name Growl Notifications for Mac OSX
 Sends Caller ID and Name information to Growl on your Mac from your Obihai ATA device
 
-Looks up contact name information from Outlook 2011 and Address Book
+Imports contact name information from Outlook 2011 and Address Book on startup of service
 
-If number is not in either looks up CNAM information from opencam (https://www.opencnam.com/)
+If contact information is not available then it looks up CNAM information from opencam (https://www.opencnam.com/)
 
 
 ## Installation

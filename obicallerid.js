@@ -9,8 +9,9 @@
  */
 
 var command = "none";
-if (process.argv.length > 2){
-    command = process.argv[2];
+var userArgs = process.argv.slice(2);
+if (userArgs.length > 0){
+    command = userArgs[0];
 }
 
 var winston = require('winston');

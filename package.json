@@ -18,6 +18,7 @@
         }
     ],
     "author": "Shawn Bissell <shawn.bissell@gmail.com>",
+    "preferGlobal": "true",
     "bin" : { "obicallerid" : "obicallerid.js" },
     "dependencies": {
         "winston": ">= 0.6.2"
