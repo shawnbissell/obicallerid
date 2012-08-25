@@ -4,7 +4,19 @@
     "keywords": ["callerid", "cnam", "obi", "obihai", "caller id"],
     "version": "0.1.0",
     "homepage": "",
-    "repository": "",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/shawnbissell/obicallerid.git"
+    },
+    "bugs": {
+        "url": "https://github.com/shawnbissell/obicallerid/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/shawnbissell/obicallerid/blob/master/LICENSE-MIT"
+        }
+    ],
     "author": "Shawn Bissell <shawn.bissell@gmail.com>",
     "bin" : { "obicallerid" : "obicallerid.js" },
     "dependencies": {
@@ -13,5 +25,7 @@
         , "opencnam": ">= 0.1.1"
         , "applescript": ">= 0.2.1"
     },
-    "engines": { "node": "*" }
+    "engines": {
+        "node": ">= 0.6.0"
+    }
 }

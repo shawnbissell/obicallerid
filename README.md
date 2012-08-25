@@ -1,21 +1,21 @@
 # Obi Caller ID Name Growl Notifications for Mac OSX
-  Sends Caller ID and Name information to Growl on your Mac from your Obihai ATA device
+Sends Caller ID and Name information to Growl on your Mac from your Obihai ATA device
 
-  Looks up contact name information from Outlook 2011 and Address Book
+Looks up contact name information from Outlook 2011 and Address Book
 
-  If number is not in either looks up CNAM information from opencam (https://www.opencnam.com/)
+If number is not in either looks up CNAM information from opencam (https://www.opencnam.com/)
 
 
 ## Installation
-  Install Growl from AppStore
+Install Growl from AppStore
 
-  Install growlnotify command line application http://growl.info/extras.php#growlnotify
+Install growlnotify command line application http://growl.info/extras.php#growlnotify
 
     $ npm install -g obicallerid
 
 ##Obi Setup
 
-  In Obitalk website -> Obi Expert Config
+In Obitalk website -> Obi Expert Config
 
     System Management -> Device Admin
       Syslog
@@ -29,6 +29,10 @@
     $ cd <dir of your choice>
     $ obicallerid
 
-  info messages will be output to console
+info messages will be output to console
 
-  debug messages will be logged to output.log
+debug messages will be logged to output.log
+
+## License
+Copyright (c) 2012 Shawn Bissell
+Licensed under the MIT license.

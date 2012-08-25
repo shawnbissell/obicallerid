@@ -1,5 +1,13 @@
 #!/usr/bin/env node
 
+/*
+ * obicallerid
+ * https://github.com/shawnbissell/obicallerid
+ *
+ * Copyright (c) 2012 Shawn Bissell
+ * Licensed under the MIT license.
+ */
+
 var command = "none";
 if (process.argv.length > 2){
     command = process.argv[2];
