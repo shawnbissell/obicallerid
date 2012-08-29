@@ -51,27 +51,30 @@ function cleanNumber(num)
 var cnams = {};
 function importScript(script)
 {
-    logger.info("Importing cnams from " + script);
-    applescript.execFile(__dirname + "/" + script, [ ], function(err, rtn) {
-        if (err) {
-            logger.error("Could not import " + script + " " + err);
-        } else if(Array.isArray(rtn) && rtn.length > 0) {
-            logger.info(script + " Importing " + rtn.length + " numbers...");
-            for (var i=0; i<rtn.length; i=i+2) {
-                var num = cleanNumber(rtn[i]);
+    try {
+        logger.info("Importing cnams from " + script);
+        applescript.execFile(__dirname + "/" + script, [ ], function(err, rtn) {
+            if (err) {
+                logger.error("Could not import " + script + " " + err);
+            } else if(Array.isArray(rtn) && rtn.length > 0) {
+                logger.info(script + " Importing " + rtn.length + " numbers...");
+                for (var i=0; i<rtn.length; i=i+2) {
+                    var num = cleanNumber(rtn[i]);
 
-                if(cnams[num] == undefined)
-                {
-                    cnams[num] = rtn[i+1];
+                    if(cnams[num] == undefined)
+                    {
+                        cnams[num] = rtn[i+1];
+                    }
                 }
+                logger.info(script + " Import completed successfully!");
+
+            } else {
+                logger.info("no cnams found for " + script);
             }
-            logger.info(script + " Import completed successfully!");
-
-        } else {
-            logger.info("no cnams found for " + script);
-        }
-    });
-
+        });
+    } catch (ex) {
+        logger.error("Could not import script " + ex);
+    }
 }
 importScript("outlookimport.scpt");
 importScript("addressbookimport.scpt");
@@ -82,10 +85,10 @@ function lookupOpenCnam(number, retry)
     opencnam.lookup(number, function (err, cnam) {
         if (!err) {
             logger.info("Cnam found " + cnam);
-            growl('Incoming call from \n' + cnam + ' ' + number, { title: 'Obi Caller ID'} );
+            growl('Call from ' + cnam + ' ' + number, { title: 'Obi Caller ID'} );
         } else if(retry) {
             logger.info("Cnam not found for number " + number + " ... retrying ... ");
-            growl('Incoming call from \n' + number, { title: 'Obi Caller ID'} );
+            growl('Call from ' + number, { title: 'Obi Caller ID'} );
             setTimeout(function(){lookupOpenCnam(number, false)},2000);
         } else {
             logger.error("retry lookup failed for " + number + " " + err);
@@ -98,7 +101,7 @@ function lookupCnam(number)
     var cachedName = cnams[cleanNumber(number)];
     if(cachedName != undefined){
         logger.info("Cached cnam found  " + cachedName );
-        growl('Incoming call from \n' + cachedName + ' ' + number, { title: 'Obi Caller ID'} );
+        growl('Call from ' + cachedName + ' ' + number, { title: 'Obi Caller ID'} );
     } else {
         lookupOpenCnam(number, true);
     }
@@ -121,10 +124,10 @@ function sendCallerIDInfo(name, number, ipAddress)
         logger.info("Caller ID Name found! " + name );
         if(number != undefined){
             logger.info("Sending name and number  " + name + " " + number);
-            growl('Incoming call from \n' + name + ' ' + number,  { title: 'Obi Caller ID'} );
+            growl('Call from ' + name + ' ' + number,  { title: 'Obi Caller ID'} );
         } else {
             logger.info("Sending name and ipAddress  " + name + " " + ipAddress);
-            growl('Incoming call from \n' + name + ' <' + ipAddress + ">", { title: 'Obi Caller ID'} );
+            growl('Call from ' + name + ' <' + ipAddress + ">", { title: 'Obi Caller ID'} );
         }
     } else {
         lookupCnam(number)
@@ -166,10 +169,11 @@ try {
     server.on("listening", function () {
         var address = server.address();
         logger.info("server listening " + address.address + ":" + address.port);
+        growl('Obi Caller Id Started! Listening on Port 7000', { title: 'Obi Caller ID'} );
     });
 
     server.bind(7000);
-    growl('Obi Caller Id Started!\nListening on Port 7000', { title: 'Obi Caller ID'} );
+
 
 
     /* unit tests */
