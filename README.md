@@ -16,20 +16,22 @@ Install growlnotify command line application
  * http://growl.info/extras.php#growlnotify
 
 Install obicallerid using Node Package Manager
- * $ sudo npm install -g obicallerid
+
+    $ sudo npm install -g obicallerid
 
 ## Installation for Windows
 Install Node JS
-    http://nodejs.org/download/
+ * http://nodejs.org/download/
 
 Install Growl for Windows
-    http://www.growlforwindows.com/gfw/
+ * http://www.growlforwindows.com/gfw/
 
 Install growlnotify
-    http://www.growlforwindows.com/gfw/help/growlnotify.aspx
-Ensure it the .exe is either on your global PATH or copied to you \Windows\system32\ dir
+ * http://www.growlforwindows.com/gfw/help/growlnotify.aspx
+ * Ensure it the .exe is either on your global PATH or copied to you \Windows\system32\ dir
 
 Install obicallerid using node package manager
+
     $ npm install -g obicallerid
 
 ##Obi Setup
@@ -48,9 +50,8 @@ In Obitalk website -> Obi Expert Config
     $ cd <dir of your choice>
     $ obicallerid
 
-info messages will be output to console
-
-debug messages will be logged to output.log
+ * info messages will be output to console
+ * debug messages will be logged to output.log
 
 ##Installing as a service
 
