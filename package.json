@@ -26,6 +26,10 @@
         , "opencnam": ">= 0.1.1"
         , "applescript": ">= 0.2.1"
     },
+    "scripts": {
+        "install-windows-service": "winser -i",
+        "uninstall-windows-service": "winser -r"
+    },
     "engines": {
         "node": ">= 0.6.0"
     }
