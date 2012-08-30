@@ -7,16 +7,16 @@ If contact information is not available then it looks up CNAM information from o
 
 ## Installation for Mac
 Install Node JS
-    http://nodejs.org/download/
+ * http://nodejs.org/download/
 
 Install Growl from AppStore
-    http://itunes.apple.com/ca/app/growl/id467939042
+ * http://itunes.apple.com/ca/app/growl/id467939042
 
 Install growlnotify command line application
-    http://growl.info/extras.php#growlnotify
+ * http://growl.info/extras.php#growlnotify
 
 Install obicallerid using Node Package Manager
-    $ sudo npm install -g obicallerid
+ * $ sudo npm install -g obicallerid
 
 ## Installation for Windows
 Install Node JS
