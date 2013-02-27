@@ -64,6 +64,7 @@ function importScript(script)
                     if(cnams[num] == undefined)
                     {
                         cnams[num] = rtn[i+1];
+                        //logger.info("Imported " + cnams[num] + " " + num);
                     }
                 }
                 logger.info(script + " Import completed successfully!");
@@ -120,7 +121,7 @@ function sendCallerIDInfo(name, number, ipAddress)
     lastSentTime = currentTime;
 
 
-    if (name != "") {
+    if (name != "" && cleanNumber(name) != number) {
         logger.info("Caller ID Name found! " + name );
         if(number != undefined){
             logger.info("Sending name and number  " + name + " " + number);
@@ -205,7 +206,8 @@ try {
             lookupCnam("604 555 4321");
             lookupCnam("604 555 3214");
             lookupCnam("604 555 2341");
-            lookupCnam("604(555)x1111x")
+            lookupCnam("604(555)x1111x");
+            lookupCnam("604 638 1744");
 
         }, 30000);
 
