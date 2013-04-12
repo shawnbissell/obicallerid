@@ -29,6 +29,7 @@ var growl = require('growl');
 var opencnam = require('opencnam');
 var dgram = require("dgram");
 var applescript = require("applescript");
+var os = require('os');
 var fromRegex = /^INVITE[\S\s]*From:\s*"?([\w\s\.\+\?\$]*?)"?<sip:((.*)@)?(.*)>;.*/;
 var cidRegex = /<7> \[SLIC\] CID to deliver: '([\w\s\.\+\?\$]*?)' (\d*).*/;
 
@@ -77,9 +78,13 @@ function importScript(script)
         logger.error("Could not import script " + ex);
     }
 }
-importScript("outlookimport.scpt");
-importScript("addressbookimport.scpt");
 
+logger.info("Platform=" + os.platform());
+if(os.platform() == "darwin")
+{
+    importScript("outlookimport.scpt");
+    importScript("addressbookimport.scpt");
+}
 
 function lookupOpenCnam(number, retry)
 {
