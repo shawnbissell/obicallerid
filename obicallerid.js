@@ -72,6 +72,9 @@ function importScript(script)
 
             } else {
                 logger.info("no cnams found for " + script);
+                if(script == "outlookimport.scpt") {
+                    logger.info("Outlook must be running in order to import its contacts!");
+                }
             }
         });
     } catch (ex) {
