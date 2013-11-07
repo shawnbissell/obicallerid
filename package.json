@@ -2,7 +2,7 @@
     "name": "obicallerid",
     "description": "Caller ID and Name Growl notifications from Obihai devices",
     "keywords": ["callerid", "cnam", "obi", "obihai", "caller id"],
-    "version": "0.1.6",
+    "version": "0.1.7",
     "homepage": "",
     "repository": {
         "type": "git",
