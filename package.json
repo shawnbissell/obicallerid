@@ -1,36 +1,44 @@
 {
-    "name": "obicallerid",
-    "description": "Caller ID and Name Growl notifications from Obihai devices",
-    "keywords": ["callerid", "cnam", "obi", "obihai", "caller id"],
-    "version": "0.1.10",
-    "homepage": "",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/shawnbissell/obicallerid.git"
-    },
-    "bugs": {
-        "url": "https://github.com/shawnbissell/obicallerid/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/shawnbissell/obicallerid/blob/master/LICENSE-MIT"
-        }
-    ],
-    "author": "Shawn Bissell <shawn.bissell@gmail.com>",
-    "preferGlobal": "true",
-    "bin" : { "obicallerid" : "obicallerid.js" },
-    "dependencies": {
-        "winston": ">= 0.6.2"
-        , "growl": ">= 1.5.1"
-        , "opencnam": ">= 0.1.1"
-        , "applescript": ">= 0.2.1"
-    },
-    "scripts": {
-        "install-windows-service": "winser -i",
-        "uninstall-windows-service": "winser -r"
-    },
-    "engines": {
-        "node": ">= 0.6.0"
+  "name": "obicallerid",
+  "description": "Caller ID and Name Growl notifications from Obihai devices",
+  "keywords": [
+    "callerid",
+    "cnam",
+    "obi",
+    "obihai",
+    "caller id"
+  ],
+  "version": "0.1.11",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shawnbissell/obicallerid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shawnbissell/obicallerid/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shawnbissell/obicallerid/blob/master/LICENSE-MIT"
     }
+  ],
+  "author": "Shawn Bissell <shawn.bissell@gmail.com>",
+  "preferGlobal": "true",
+  "bin": {
+    "obicallerid": "obicallerid.js"
+  },
+  "dependencies": {
+    "winston": ">= 0.6.2",
+    "growl": ">= 1.5.1",
+    "opencnam": ">= 0.1.1",
+    "applescript": ">= 0.2.1"
+  },
+  "scripts": {
+    "install-windows-service": "winser -i",
+    "uninstall-windows-service": "winser -r"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  }
 }
