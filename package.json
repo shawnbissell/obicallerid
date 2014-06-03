@@ -31,7 +31,7 @@
   "dependencies": {
     "winston": ">= 0.6.2",
     "growl": ">= 1.5.1",
-    "opencnam": ">= 0.1.1",
+    "opencnam": "https://github.com/shawnbissell/node-opencnam/tarball/cf272aa3b7495206ab84d01131b2d8daaaa9805d",
     "applescript": ">= 0.2.1"
   },
   "scripts": {
