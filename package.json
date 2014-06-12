@@ -8,7 +8,7 @@
     "obihai",
     "caller id"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "",
   "repository": {
     "type": "git",
@@ -34,12 +34,11 @@
     "opencnam": "https://github.com/shawnbissell/node-opencnam/tarball/cf272aa3b7495206ab84d01131b2d8daaaa9805d",
     "applescript": ">= 0.2.1",
     "jasmine-node": ">= 1.14.0"
-
   },
   "scripts": {
-      "test": "jasmine-node spec/obicalleridSpec.js",
-      "install-windows-service": "winser -i",
-      "uninstall-windows-service": "winser -r"
+    "test": "jasmine-node spec/obicalleridSpec.js",
+    "install-windows-service": "winser -i",
+    "uninstall-windows-service": "winser -r"
   },
   "engines": {
     "node": ">= 0.6.0"
