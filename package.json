@@ -26,7 +26,7 @@
   "author": "Shawn Bissell <shawn.bissell@gmail.com>",
   "preferGlobal": "true",
   "bin": {
-    "obicallerid": "node obicallerid-server.js"
+    "obicallerid": "obicallerid-server.js"
   },
   "dependencies": {
     "winston": ">= 0.6.2",

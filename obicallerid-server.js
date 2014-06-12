@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*
  * obicallerid
  * https://github.com/shawnbissell/obicallerid
