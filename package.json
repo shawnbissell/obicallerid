@@ -8,7 +8,7 @@
     "obihai",
     "caller id"
   ],
-  "version": "0.1.12",
+  "version": "0.2.0",
   "homepage": "",
   "repository": {
     "type": "git",
@@ -26,17 +26,20 @@
   "author": "Shawn Bissell <shawn.bissell@gmail.com>",
   "preferGlobal": "true",
   "bin": {
-    "obicallerid": "obicallerid.js"
+    "obicallerid": "node obicallerid-server.js"
   },
   "dependencies": {
     "winston": ">= 0.6.2",
     "growl": ">= 1.5.1",
     "opencnam": "https://github.com/shawnbissell/node-opencnam/tarball/cf272aa3b7495206ab84d01131b2d8daaaa9805d",
-    "applescript": ">= 0.2.1"
+    "applescript": ">= 0.2.1",
+    "jasmine-node": ">= 1.14.0"
+
   },
   "scripts": {
-    "install-windows-service": "winser -i",
-    "uninstall-windows-service": "winser -r"
+      "test": "jasmine-node spec/obicalleridSpec.js",
+      "install-windows-service": "winser -i",
+      "uninstall-windows-service": "winser -r"
   },
   "engines": {
     "node": ">= 0.6.0"
